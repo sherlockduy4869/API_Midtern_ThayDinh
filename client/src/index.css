@@ -1,0 +1,26 @@
+/* import font here using '@import url();' */
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* import font and color of the webpage here using: */    
+  --font-base: 'Cuprum', sans-serif;
+  --font-alt: 'Pacifico', cursive;
+
+  --color-green: #86BC42;
+  --color-gray: #999;
+  --color-black: #0c1014;
+  --color-white: #e3e3e3;
+  --color-milky: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}

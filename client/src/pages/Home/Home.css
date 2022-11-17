@@ -1,0 +1,49 @@
+.app__home{
+    display: flex;
+    flex-direction: column;
+}
+
+.app__home-tab{
+    margin: 0 auto 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.app__home-tab button{
+    position: relative;
+    background-color: inherit;
+    border: none;
+    color: var(--color-black);
+    font-weight: 700;
+    padding: 5px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    
+}
+
+.app__home-tab button:after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0;
+    background: var(--color-green);
+    height: 3px;
+    transition: all .5s;
+}
+
+.app__home-tab button.active,
+.app__home-tab button:hover{
+    color: var(--color-green);
+}
+
+.app__home-tab button.active::after,
+.app__home-tab button:hover::after{
+    width: 100%;
+}
+
+.app__items{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+

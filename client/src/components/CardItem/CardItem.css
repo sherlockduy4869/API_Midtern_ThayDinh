@@ -1,0 +1,71 @@
+.app__card{
+    border: 1px solid var(--color-white);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s ease;
+    margin:0 0 30px 30px;
+}
+
+.app__card:hover{
+    box-shadow: 3.5px 6px 25px 0 rgb(0 0 0 / 10%);
+    transform: translateY(-5px);
+}
+
+.app__card-img img{
+    width: 260px;
+    height: 260px;
+}
+
+.card-info{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-milky);
+    transform: translateY(50px);
+    transition: all .3s ease;
+}
+
+.app__card:hover .card-info{
+    transform: translateY(0px);
+    background-color: var(--color-green);
+}
+
+
+.app__card .card-info .card-info__title{
+    color: var(--color-black);
+    font-size: 18px; 
+    font-weight: 300;
+}
+
+.app__card .card-info__price{
+    margin: 5px 0 10px;
+}
+
+
+.card-info__price .card-info__price-sale{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-green);
+    transition: all .3s ease;
+}
+
+.card-info__price .card-info__price-sale span{
+    transition: all .5s ease;
+}
+
+
+.card-info__price .card-info__price-original{
+    font-size: 14px;
+    color: var(--color-gray);
+    text-decoration: line-through;
+    margin-left: 10px;
+    transition: all .3s ease;
+}
+
+.card-info__price .card-info__price-original span{
+    transition: all .5s ease;
+}
+
+.app__card:hover .card-info__price-sale,
+.app__card:hover .card-info__price-original{
+    color: var(--color-white);
+}

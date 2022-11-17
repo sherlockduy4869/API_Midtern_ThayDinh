@@ -1,0 +1,63 @@
+/* Website pattern */
+
+.section__padding {
+  padding: 100px 0;
+}
+
+.section__wrapper{
+  margin: 0 164px;
+  padding: 0 30px;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom__button {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 35px;
+  margin: 0 5px;
+  padding: 0 10px;
+  border: 1px solid;
+  line-height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.p__cuprum{
+  font-family: var(--font-base);
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.headtext__pacifico{
+  font-family: var(--font-alt);
+  color: var(--color-black);
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 60px;
+}
+
+@media screen and (min-width: 1280px) {
+  
+}
+
+@media screen and (max-width: 680px) {
+  
+}
+
+@media screen and (max-width: 550px) {
+  
+}
+

@@ -14,7 +14,7 @@ class CreateFoodTable extends Migration
     public function up()
     {
         Schema::create('tbl_food', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id_food');
             $table->string('name');
             $table->integer('unit_price');
             $table->integer('promotion_price');

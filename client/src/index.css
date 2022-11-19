@@ -7,10 +7,14 @@
   --font-alt: 'Pacifico', cursive;
 
   --color-green: #86BC42;
-  --color-gray: #999;
+  --color-lightgreen: #b5e27d;
+  --color-gray: #999999;
+  --color-lightgray: #ededed;
   --color-black: #0c1014;
-  --color-white: #e3e3e3;
+  --color-white: #ffffff;
   --color-milky: #fafafa;
+  --color-fb: #2D86FF;
+  --color-hoverfb: #1857af;
 }
 
 * {

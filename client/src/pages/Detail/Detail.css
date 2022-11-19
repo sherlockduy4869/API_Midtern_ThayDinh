@@ -1,0 +1,112 @@
+.app__detail{
+    margin-top: 70px !important;
+    flex-direction: column;
+}
+
+.app__detail .app__detail-content{
+    display: flex;
+}
+
+
+.app__detail .app__detail-img{
+    width: 455px;
+    height: 455px;
+    border: 2px solid var(--color-lightgray);
+}
+
+.app__detail .app__detail-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.app__detail-info{
+    padding-left: 30px;
+    padding-top: 2px;
+    width: 58%;
+}
+
+.app__detail-info p{
+    font-size: 16px;
+    color: black;
+    text-transform: none;
+}
+
+.app__detail-info .detail-info__name{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.app__detail-info .detail-info__name h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.app__detail-info .detail-info__price{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.detail-info__price .detail-info__price-sale{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-green);
+}
+
+.detail-info__price .detail-info__price-original{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-gray);
+    text-decoration: line-through;
+    margin-left: 20px;
+}
+
+.app__detail-info .detail-info__desc{
+    margin-bottom: 15px;
+}
+
+.app__detail-info .detail-info__hotline{
+    display: flex;
+}
+
+.app__detail-info .detail-info__hotline a{
+    color: var(--color-green);
+}
+
+.app__detail-info .detail-info__hotline a:hover{
+    color: var(--color-lightgreen);
+}
+
+.app__detail-info .detail-info__hotline span{
+    margin: 0 3px;
+}
+
+.detail-info__hotline-button{
+    display: flex;
+}
+
+.detail-info__hotline-button button{
+    background-color: var(--color-fb);
+    color: var(--color-white);
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 3px 3px;
+    margin-left: 3px;
+    cursor: pointer;
+    display: flex;
+}
+
+.detail-info__hotline-button button:hover{
+    background-color: var(--color-hoverfb);
+}
+
+.app__detail-info .detail-info__category span{
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.app__detail-info .detail-info__category span:hover{
+    color: var(--color-lightgreen);
+}
+

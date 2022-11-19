@@ -1,6 +1,6 @@
 .app__home{
-    display: flex;
     flex-direction: column;
+    margin-top: 60px !important;
 }
 
 .app__home-tab{

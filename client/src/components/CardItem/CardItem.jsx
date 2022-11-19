@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import images from "../../constants/images";
 
 import './CardItem.css'
@@ -16,9 +17,9 @@ const CardItem = () => {
                     <span className="card-info__price-original">15,000<span>₫</span></span>
                 </div>
                 <div className="p__cuprum card-info__detail">
-                    <a href="detail">
+                    <Link to='/detail'>
                         <button type="button" className="custom__button card-info__detail-button">chi tiết</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

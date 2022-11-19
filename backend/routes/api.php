@@ -19,4 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('food', App\Http\Controllers\FoodController::class);
+Route::prefix('v1')->group(function(){
+    Route::resource('food', App\Http\Controllers\Api\v1\FoodController::class);
+});
+

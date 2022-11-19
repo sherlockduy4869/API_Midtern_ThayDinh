@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Models\Food;
-use App\Http\Resources\FoodResource;
-use App\Http\Resources\FoodCollection;
+use App\Http\Resources\v1\FoodResource;
+use App\Http\Resources\v1\FoodCollection;
 
 class FoodController extends Controller
 {
@@ -103,3 +105,4 @@ class FoodController extends Controller
         //
     }
 }
+

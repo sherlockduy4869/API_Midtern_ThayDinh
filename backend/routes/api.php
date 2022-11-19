@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\v1\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function(){
     Route::resource('food', App\Http\Controllers\Api\v1\FoodController::class);
+    Route::get('food_by_type/{type}', [IndexController::class, 'getFoodByType']);
 });
 

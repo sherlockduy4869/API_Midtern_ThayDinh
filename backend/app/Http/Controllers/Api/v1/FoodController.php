@@ -18,7 +18,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-        return new FoodResource(Food::paginate(2));
+        return new FoodCollection(Food::paginate(2));
     }
 
     /**
@@ -56,7 +56,7 @@ class FoodController extends Controller
 
         $new_food = Food::create($request->all());
 
-        return new FoodResource($new_food);
+        //return new FoodResource($new_food);
 
     }
 

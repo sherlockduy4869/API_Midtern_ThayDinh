@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')->group(function(){
     Route::resource('food', App\Http\Controllers\Api\v1\FoodController::class);
-    Route::get('food_by_type/{type}', [IndexController::class, 'getFoodByType']);
+    Route::get('food-by-type/{type}', [IndexController::class, 'getFoodByType']);
 });
 

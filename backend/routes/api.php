@@ -25,3 +25,5 @@ Route::prefix('v1')->group(function(){
     Route::get('food-by-type/{type}', [IndexController::class, 'getFoodByType']);
 });
 
+
+

@@ -21,7 +21,8 @@ class FoodFactory extends Factory
             'unit_price' => $this->faker->numberBetween($min = 15000, $max = 17000),
             'promotion_price' => $this->faker->numberBetween($min = 12000, $max = 15000),
             'description' => $this->faker->text(),
-            'food_type' => $this->faker->sentence($nbWords = 3, $variableNbWords = true)
+            'food_type' => $this->faker->sentence($nbWords = 3, $variableNbWords = true),
+            'image_food' => $this->faker->sentence($nbWords = 3, $variableNbWords = true)
         ];
     }
 }

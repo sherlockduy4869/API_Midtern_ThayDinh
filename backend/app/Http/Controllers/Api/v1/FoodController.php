@@ -44,19 +44,28 @@ class FoodController extends Controller
             'unit_price' => 'required',
             'promotion_price' => 'required',
             'description' => 'required',
-            'food_type' => 'required'
+            'food_type' => 'required',
+            'image_food' => 'required'
         ],
         [
             'name.required' => 'Name can not be empty',
             'unit_price.required' => 'Unit price can not be empty',
             'promotion_price.required' => 'Promotion price can not be empty',
             'description.required' => 'Description can not be empty',
-            'food_type.required' => 'Food type can not be empty'
+            'food_type.required' => 'Food type can not be empty',
+            'image_food.required' => 'Image food can not be empty'
         ]);
 
         $new_food = Food::create($request->all());
 
         //return new FoodResource($new_food);
+
+        if($new_food){
+            return json_encode(["status" => true]);
+        }
+        else{
+            return json_encode(["status" => false]);
+        }
 
     }
 

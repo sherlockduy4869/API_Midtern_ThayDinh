@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Food extends Model
 {
     protected $fillable = [
-        'name', 'unit_price', 'promotion_price', 'description', 'food_type' 
+        'name', 'unit_price', 'promotion_price', 'description', 'food_type', 'image_food'
     ];
     protected $primaryKey = 'id_food';
     protected $table = 'tbl_food';

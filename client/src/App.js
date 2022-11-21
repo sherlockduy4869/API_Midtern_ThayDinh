@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './components';
+import { Navbar, PostForm } from './components';
 import { Detail, Home } from './pages';
 
 import {
@@ -14,12 +14,13 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar />  
+        {/* <Navbar />  
 
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/detail/:id" element={<Detail/>}/>
-        </Routes>
+        </Routes> */}
+        <PostForm />
       </Router>
     </div>
   );

@@ -15,7 +15,7 @@ const Detail = () => {
     useEffect(() => {
         axios.get(`http://midternapi.atwebpages.com/public/api/v1/food/${id}`).then(res => {
             setDetail(res.data.data)
-            console.log(res.data.data)
+            // console.log(res.data.data)
         })      
     },[])
 

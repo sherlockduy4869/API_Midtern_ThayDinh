@@ -5,5 +5,5 @@ import CardItem from "./CardItem/CardItem";
 export{
     Navbar,
     Heading,
-    CardItem
+    CardItem,
 }

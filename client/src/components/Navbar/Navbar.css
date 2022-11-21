@@ -9,6 +9,7 @@
     top: 0;
 
     padding: 5px;
+    z-index: 99;
 }
 
 .app__navbar-logo{

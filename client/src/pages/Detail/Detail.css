@@ -9,20 +9,19 @@
 
 
 .app__detail .app__detail-img{
-    width: 455px;
-    height: 455px;
+    
     border: 2px solid var(--color-lightgray);
 }
 
 .app__detail .app__detail-img img{
-    width: 100%;
-    height: 100%;
+    width: 455px;
+    height: 455px;
 }
 
 .app__detail-info{
     padding-left: 30px;
     padding-top: 2px;
-    width: 58%;
+    min-width: calc(100% - 455px);
 }
 
 .app__detail-info p{

@@ -17,8 +17,8 @@ function App() {
         <Navbar />  
 
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/detail" element={<Detail/>}/>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/detail/:id" element={<Detail/>}/>
         </Routes>
       </Router>
     </div>

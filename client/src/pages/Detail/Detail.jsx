@@ -1,30 +1,42 @@
-import React from "react";
-import images from "../../constants/images";
+import React, { useEffect, useState } from "react";
+import { Heading } from "../../components";
+import { useParams } from "react-router-dom";
 import { FaPhone } from 'react-icons/fa'
 import { AiFillLike } from 'react-icons/ai'
 
 import './Detail.css';
-import { Heading } from "../../components";
+
+import axios from "axios";
 
 const Detail = () => {
+    const {id} = useParams();
+    const [detail, setDetail] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://midternapi.atwebpages.com/public/api/v1/food/${id}`).then(res => {
+            setDetail(res.data.data)
+            console.log(res.data.data)
+        })      
+    },[])
+
     return(
         <div className="app__detail section__padding section__wrapper flex__center">
             <Heading title="Chi tiết sản phẩm" className=""/>
             <div className="app__detail-content ">
                 <div className="app__detail-img">
-                    <img src={images.nhoxanh} alt=""></img>
+                    <img src={detail.image_food} alt=""></img>
                 </div>
 
                 <div className="app__detail-info">
                     <div className="detail-info__name">
-                        <h1 className="p__cuprum">nho xanh</h1>
+                        <h1 className="p__cuprum">{detail.name}</h1>
                     </div>
                     <div className="p__cuprum detail-info__price">
-                        <span className="detail-info__price-sale">12,000<span>₫</span></span>
-                        <span className="detail-info__price-original">15,000<span>₫</span></span>
+                        <span className="detail-info__price-sale">{detail.promotion_price}<span>₫</span></span>
+                        <span className="detail-info__price-original">{detail.unit_price}<span>₫</span></span>
                     </div>
                     <div className="detail-info__desc">
-                        <p className="p__cuprum">Rau cải bắp hữu cơ (Brassica oleracea nhóm Capitata) là loại rau chủ lực trong họ Cải (còn gọi là họ Thập tự – Brassicaceae/Cruciferae),có xuất xứ từ vùng Địa Trung Hải. Nó là cây thân thảo, sống hai năm, và là một thực vật có hoa thuộc nhóm hai lá mầm với các lá tạo thành một cụm đặc hình gần như hình cầu.Là một loại rau hữu cơ rất dễ nhận biết,khó có thể nhầm lẫn</p>
+                        <p className="p__cuprum">{detail.description}</p>
                     </div>
                     <div className="detail-info__hotline"> 
                         <p className="p__cuprum"><FaPhone /> Hotline hỗ trợ 24/7: <a href="a">0123.456.789</a><span>|</span></p>

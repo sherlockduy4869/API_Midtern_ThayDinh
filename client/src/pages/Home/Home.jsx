@@ -6,10 +6,11 @@ import './Home.css';
 
 const Home = () => {
     const [carditem, setCardItem] = useState([]);
+
     useEffect(() => {
         axios.get(`http://midternapi.atwebpages.com/public/api/v1/food`).then(res => {
             console.log(res.data.data);
-            setCardItem(res.data.data);   
+            setCardItem(res.data.data);
         })
     },[]);
 
@@ -24,6 +25,7 @@ const Home = () => {
             <div className="app__items">
                 {carditem.map((info) => (
                     <CardItem 
+                    id={info.id_food}
                     name={info.name}
                     promotion_price={info.promotion_price}
                     unit_price={info.unit_price}
@@ -31,6 +33,7 @@ const Home = () => {
                     />
                 ))}     
             </div>
+            
         </div>
     );
 };

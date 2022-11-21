@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import './CardItem.css'
 
 const CardItem = ({
+    id,
     name,
     unit_price,
     promotion_price,
     image_food}) => {
     return(
+        
         <div className="app__card">
             <div className="app__card-img">
                 <img src={image_food} alt="nho xanh"></img>
@@ -20,7 +22,7 @@ const CardItem = ({
                     <span className="card-info__price-original">{unit_price}<span>₫</span></span>
                 </div>
                 <div className="p__cuprum card-info__detail">
-                    <Link to='/detail'>
+                    <Link to={`/detail/${id}`}>
                         <button type="button" className="custom__button card-info__detail-button">chi tiết</button>
                     </Link>
                 </div>

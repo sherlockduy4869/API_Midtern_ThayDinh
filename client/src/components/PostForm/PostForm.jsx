@@ -8,11 +8,11 @@ const PostForm = () => {
     const url = "http://midternapi.atwebpages.com/public/api/v1/food";
     const [data, setData] = useState({
         name: "",
-        unit_price: "",
-        promotion_price: "",
+        unit_price: 0,
+        promotion_price: 0,
         food_type: "",
         description: "",
-        image: ""
+        image_food: ""
     })
 
     function submit(e) {
@@ -23,7 +23,7 @@ const PostForm = () => {
             promotion_price: data.promotion_price,
             food_type: data.food_type,
             description: data.description,
-            image: data.image_food
+            image_food: data.image_food
         })
         .then(res => {
             console.log(res.data)
@@ -42,11 +42,11 @@ const PostForm = () => {
             <Heading title="Add Product"/>
             <form className="app__post-form" onSubmit={(e) => submit(e)}>
                 <input onChange={(e) => handle(e)} id="name" value={data.name} placeholder="Name" type="text" ></input>
-                <input onChange={(e) => handle(e)} id="unit_price" value={data.unit_price} placeholder="Unit price" type="text" name="unit_price"></input>
-                <input onChange={(e) => handle(e)} id="promotion_price" value={data.promotion_price} placeholder="Promotion price" type="text" name="promotion_price"></input>
+                <input onChange={(e) => handle(e)} id="unit_price" value={data.unit_price} placeholder="Unit price" type="number" name="unit_price"></input>
+                <input onChange={(e) => handle(e)} id="promotion_price" value={data.promotion_price} placeholder="Promotion price" type="number" name="promotion_price"></input>
                 <input onChange={(e) => handle(e)} id="food_type" value={data.food_type} placeholder="Food type" type="text" name="food_type"></input>
                 <input onChange={(e) => handle(e)} id="description" value={data.description} placeholder="Description" type="text" name="description"></input>
-                <input onChange={(e) => handle(e)} id="image" value={data.image_food} placeholder="URL img" type="text" name="image"></input>
+                <input onChange={(e) => handle(e)} id="image_food" value={data.image_food} placeholder="URL img" type="text" name="image"></input>
                 <button className="custom__button" type="submit">Submit</button>
             </form>
         </div>

@@ -28,6 +28,8 @@ const PostForm = () => {
         .then(res => {
             console.log(res.data)
         })
+        .catch(error => console.log(error['response']['data']['errors']));
+        
     }
 
     function handle(e) {

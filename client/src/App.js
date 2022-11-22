@@ -14,11 +14,12 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar />  
+        {/* <Navbar />   */}
 
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/detail/:id" element={<Detail/>}/>
+          <Route exact path="/postform" element={<PostForm/>}/>
         </Routes>
         {/* <PostForm /> */}
       </Router>

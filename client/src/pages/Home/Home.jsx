@@ -9,11 +9,10 @@ const Home = () => {
     const [filter, setFilter] = useState([])
 
     const filterFood = (cate) => {
-        let fruitData = []
-        carditem.map((item) => {
-            (item.food_type === cate) && (fruitData.push(item))
-        })
-        setFilter(fruitData)
+        const afterfilter = carditem.filter((item) => {
+            return item.food_type === cate;
+        });
+        setFilter(afterfilter)
     }
 
     useEffect(() => {

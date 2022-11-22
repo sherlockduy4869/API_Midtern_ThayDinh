@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Heading from "../Heading/Heading";
 
 import './PostForm.css';
 
@@ -10,7 +11,8 @@ const PostForm = () => {
         unit_price: "",
         promotion_price: "",
         food_type: "",
-        description: ""
+        description: "",
+        image: ""
     })
 
     function submit(e) {
@@ -20,7 +22,8 @@ const PostForm = () => {
             unit_price: data.unit_price,
             promotion_price: data.promotion_price,
             food_type: data.food_type,
-            description: data.description 
+            description: data.description,
+            image: data.image_food
         })
         .then(res => {
             console.log(res.data)
@@ -35,14 +38,16 @@ const PostForm = () => {
     }
 
     return(
-        <div>
-            <form onSubmit={(e) => submit(e)}>
-                <input onChange={(e) => handle(e)} id="name" value={data.name} placeholder="name" type="text" ></input>
-                <input onChange={(e) => handle(e)} id="unit_price" value={data.unit_price} placeholder="unit_price" type="text" name="unit_price"></input>
-                <input onChange={(e) => handle(e)} id="promotion_price" value={data.promotion_price} placeholder="promotion_price" type="text" name="promotion_price"></input>
-                <input onChange={(e) => handle(e)} id="food_type" value={data.food_type} placeholder="food_type" type="text" name="food_type"></input>
-                <input onChange={(e) => handle(e)} id="description" value={data.description} placeholder="desc" type="text" name="description"></input>
-                <button type="submit">Submit</button>
+        <div className="app__post flex__center section__wrapper section__padding ">
+            <Heading title="Add Product"/>
+            <form className="app__post-form" onSubmit={(e) => submit(e)}>
+                <input onChange={(e) => handle(e)} id="name" value={data.name} placeholder="Name" type="text" ></input>
+                <input onChange={(e) => handle(e)} id="unit_price" value={data.unit_price} placeholder="Unit price" type="text" name="unit_price"></input>
+                <input onChange={(e) => handle(e)} id="promotion_price" value={data.promotion_price} placeholder="Promotion price" type="text" name="promotion_price"></input>
+                <input onChange={(e) => handle(e)} id="food_type" value={data.food_type} placeholder="Food type" type="text" name="food_type"></input>
+                <input onChange={(e) => handle(e)} id="description" value={data.description} placeholder="Description" type="text" name="description"></input>
+                <input onChange={(e) => handle(e)} id="image" value={data.image_food} placeholder="URL img" type="text" name="image"></input>
+                <button className="custom__button" type="submit">Submit</button>
             </form>
         </div>
     )

@@ -19,8 +19,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/detail/:id" element={<Detail/>}/>
+          <Route path='/addproduct' element={<PostForm />}></Route>
         </Routes>
-        {/* <PostForm /> */}
       </Router>
     </div>
   );

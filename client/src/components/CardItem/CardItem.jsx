@@ -10,7 +10,6 @@ const CardItem = ({
     promotion_price,
     image_food}) => {
     return(
-        
         <div className="app__card">
             <div className="app__card-img">
                 <img src={image_food} alt="nho xanh"></img>

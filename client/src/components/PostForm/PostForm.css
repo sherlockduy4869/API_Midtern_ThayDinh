@@ -1,0 +1,42 @@
+.app__post{
+    flex-direction: column;
+    margin-top: 60px !important;
+    z-index: 100;
+}
+
+.app__post-form{
+    margin:-50px auto;
+    padding: 1rem 1rem;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 3.5px 6px 25px 0 rgb(0 0 0 / 10%);
+}
+
+.app__post::before{
+    width: 500px;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.app__post .app__post-form input{
+    background-color: var(--color-lightgray);
+    margin: 1rem 2rem;
+    padding: 5px;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.app__post .app__post-form button{
+    margin: 1rem 2rem;
+    border-radius: 10px !important;
+}
+
+.app__post .app__post-form button:hover{
+    background-color: var(--color-lightgreen);
+}
+
